@@ -1,0 +1,244 @@
+.product-show-banner {
+    text-align: center;
+    padding: 80px 150px;
+    background-size: cover;
+}
+
+.gift-banner {
+	background: url(../images/gift-banner.jpg) center;
+}
+
+.drink-banner {
+	background: url(../images/drink-banner.jpg) center;
+}
+
+.table-banner {
+	background: url(../images/table-banner.jpg) center;
+}
+
+.contact-banner {
+    background: url(../images/contact-banner.jpg) center;
+}
+
+.banner-text {
+	background: rgba(0,0,0,0.5);
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 30px 0 30px 0;
+    z-index: 1;
+}
+
+.banner-text > .sale-sell {
+	font-size: 92px;
+	letter-spacing: 12px;
+}
+
+.banner-text > .sale-best {
+	font-size: 46px;
+	vertical-align: 15px;
+}
+
+.banner-text > .sale-detail {
+	margin-top: 20px;
+}
+
+.banner-list {
+	margin-top: 45px;
+}
+
+.banner-list li {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 24px;
+	margin-right: 75px;
+}
+
+.banner-list li:last-child {
+	margin-right: 0;
+}
+
+.banner-list-active {
+	font-family: "Avo-Bold";
+}
+
+/* PRODUCT LIST */
+.product-show-list {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+    height: 550px;
+}
+
+.show-list-wrap {
+    height: 10000px;
+    padding: 32px 76px 67px 76px;
+    transition: all 0.3s ease;
+}
+
+.all-product {
+	width: 10000px;
+	-webkit-transition: transform 0.5s;
+	-moz-transition: transform 0.5s;
+	-o-transition: transform 0.5s;
+	transition: transform 0.5s;
+    margin-bottom: 50px;
+}
+
+.move {
+	-webkit-animation: moveSlideshow 50s linear infinite;
+	-moz-animation: moveSlideshow 50s linear infinite;
+	-o-animation: moveSlideshow 50s linear infinite;
+	animation: moveSlideshow 50s linear infinite;
+}
+
+@-webkit-keyframes moveSlideshow {
+  100% { 
+    -webkit-transform: translateX(-66.6666%);
+    -moz-transform: translateX(-66.6666%);
+    -o-transform: translateX(-66.6666%);
+    transform: translateX(-66.6666%);
+  }
+}
+
+@-moz-keyframes moveSlideshow {
+    100% {
+        -webkit-transform: translateX(-66.6666%);
+        -moz-transform: translateX(-66.6666%);
+        -o-transform: translateX(-66.6666%);
+        transform: translateX(-66.6666%);
+    }
+}
+@-o-keyframes moveSlideshow {
+     100% {
+         -webkit-transform: translateX(-66.6666%);
+         -moz-transform: translateX(-66.6666%);
+         -o-transform: translateX(-66.6666%);
+         transform: translateX(-66.6666%);
+     }
+ }
+
+@keyframes moveSlideshow {
+ 100% {
+     -webkit-transform: translateX(-66.6666%);
+     -moz-transform: translateX(-66.6666%);
+     -o-transform: translateX(-66.6666%);
+     transform: translateX(-66.6666%);
+ }
+}
+
+.one-product {
+	display: inline-block;
+	width: 353px;
+	height: auto;
+	margin-right: 50px;
+}
+
+.product-thumbnail {
+	width: 353px;
+	height: 353px;
+	position: relative;
+	border: 10px solid #e7e7e7;
+	overflow: hidden;
+}
+
+.product-thumbnail img {
+	width: 100%;
+}
+
+.product-options {
+	padding: 60px 70px;
+}
+
+.product-options .btn-options {
+	width: 154px;
+	height: 45px;
+}
+
+.product-options .btn-options a {
+	line-height: 42px;
+	font-size: 16px;
+}
+
+.product-thumbnail:hover > .product-options {
+	opacity: 1;
+}
+
+.product-info {
+	text-align: center;
+	color: #fff;
+	padding: 30px 72px 0px 72px;
+}
+
+.product-price {
+	margin-top: 20px;
+}
+
+.product-price span {
+	font-size: 20px;
+	font-family: "Avo-Bold";
+}
+
+.product-price b {
+	font-size: 32px;
+}
+
+.product-price img {
+	width: 25px;
+}
+
+/* DRINK */
+.drink-text {
+	background: rgba(255,255,255,0.5);
+	color: #000;
+	border-color: #000;
+}
+
+/* FOOTER */
+
+footer {
+	margin-top: 0;
+}
+
+@media all and (max-width: 796px) {
+	.product-show-banner {
+		padding: 5px;
+	}
+
+	.banner-text > .sale-sell {
+		font-size: 74px;
+	}
+
+	.banner-list li {
+		font-size: 16px;
+		margin-right: 20px;
+	}
+
+	.product-show-list {
+		padding: 5px;
+		padding-bottom: 20px;
+	}
+
+	.product-thumbnail {
+		width: 100%;
+	}
+
+	.product-options {
+		padding: 40px 10px;
+	}
+
+    .product-info {
+        padding: 20px 10px;
+    }
+
+    .show-list-wrap {
+        padding: 0;
+        padding-top: 50px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .one-product {
+        width: 92vw;
+        margin-right: 57px;
+    }
+}

@@ -1,0 +1,109 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define */
+
+body {
+    transition: all 1s ease;
+    font-family: 'Roboto';
+}
+
+.background {
+    background-color: #722872;
+}
+
+.text-color {
+    color: #722872;
+}
+
+.left-button {
+    float: left;
+}
+
+.right-button {
+    float: right;
+}
+
+/* Main */
+.main {
+    margin: 10% auto auto auto;
+    text-align: center;
+}
+
+/* Content */
+.content {
+    margin: 0 auto;
+    width: 500px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 5px;
+    transition: min-height 1s ease-out;
+}
+
+.content .text-content {
+    font-size : 32px;
+}
+
+.content .fa-quote-left {
+    float: left;
+}
+.content .fa-quote-right {
+     float: right;
+ }
+
+.content .text-author {
+    display: inline-block;
+    font-size: 14px;
+    float: right;
+}
+
+/* Button */
+#button {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-family: 'Arial';
+    font-size: 14px;
+}
+
+#button a:hover {
+    opacity: 0.8;
+}
+
+/* Copyright */
+.copyright {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 720px){
+
+    body {
+        position: relative;
+        padding: 10px;
+    }
+
+    .content {
+        display: block;
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+
+    .content .text-content {
+        font-size : 26px;
+    }
+
+}

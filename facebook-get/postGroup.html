@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Post Group</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <font color="red"><b>Mỗi lần đăng xong 10 nhóm bạn phải đợi ít nhất 1 tiếng nếu không muốn bị khóa nick</b></font><br/><br/>
+        <div id="status"></div>
+        <div id="timeStaus"></div>
+        <div id="postStatus"></div>
+        <br/>
+        <a href="https://developers.facebook.com/tools/explorer/" target="_blank">GET Access Token</a><br/><br/>
+        
+        <form action="#" method="POST" name="postForm" id="postForm">
+            <input type="text" name="access_token" id="access_token" style="width: 50%" placeholder="Access Token..."/><br/><br/>
+            <input type="text" name="url" id="url" placeholder="Link cần post..."/>
+            <input type="submit" value="Post Now"/>
+        </form>
+        <br/>
+        Số giây nghỉ sau khi post xong 1 nhóm:
+        <input type="text" value="20" id="timeOnePost" style="width: 50px;text-align:center;"/> giây
+        <br/>
+        <p><span style="color:red">Hãy để số giây >= 20 nếu không muốn bị khóa nick</span>
+            <br/><br/>
+            <span style="font-weight: bold">10 nhóm chuẩn bị đăng là: </span>
+        </p>
+        
+        
+    </body>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="FBinit.js"></script>
+    <script type="text/javascript" src="postGroupJS.js"></script>
+    
+</html>

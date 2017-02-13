@@ -1,0 +1,264 @@
+/*!
+ * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
+}
+a {
+    color: #f05f40;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.btn{
+    color: #fff;
+    margin: 2px;
+    text-indent:5px;
+    -webkit-transition: all 0.2s linear; transition: all 0.2s linear;
+    border-radius: 0px;
+}
+ .btn:hover{
+    color: #fff;
+    background: transparent;
+}
+@media (min-width:992px){
+    .btn{
+    font-size: 1em;
+    padding: 5px 30px;
+    }
+}
+
+.form-control{
+    border-radius: 0px;
+}
+.form-control:focus{
+    border-bottom: 3px solid #f62459;
+}
+
+section{
+    padding: 80px 0px;
+    background: url("../img/header.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/*================================
+        HEADER STYLES
+==================================*/
+header .header-content {
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+header .header-content .header-content-inner h5 {
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5em;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 20px;
+    max-width: 100%;
+    font-weight:900;
+    }
+header .header-content .header-content-inner hr {
+    margin: 20px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+	border-color: white;
+}
+header .header-content .header-content-inner a {
+    font-family: Arial,sans-serif;
+    color:#fff;
+    font-size:1.5em;
+}
+header .btn-lode {
+    background-color:#f62459;
+    border: 2px solid #f62459;
+}
+header .btn-dangnhap {
+    background-color:#2980b9;
+    border: 2px solid #2980b9;
+}
+header .modal-content {
+    padding: 20px;
+}
+@media(min-width:992px) {
+    
+    header .header-content .header-content-inner h5 {
+        font-size: 52px;
+    }
+    
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+
+    }
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+    header .modal-content {
+        padding: 50px 150px;
+    }
+}
+
+/*================================
+    DANH SACH THANH VIEN STYLES
+==================================*/
+
+#home {
+    background:#ecf0f1;
+}
+/* Search thành viên */
+
+#search input{
+    background: none repeat scroll 0 0 #fff;
+    border: 2px solid #2c3e50;
+    color: #7F7F7F;
+    float: left;
+    height: 20px;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s ease-in-out 0s;
+    width: 83%;
+}
+#search input:focus{
+        background-color: #2c3e50;
+        color: #fff;
+    }
+@media (min-width:992px)
+{
+    #search {
+        float:right;
+    }
+    #search input{
+    width: 300px;
+    }
+    
+}
+#search button {
+    display: inline;
+    background: url("../img/search.png") no-repeat scroll center center #2c3e50;
+    cursor: pointer;
+    height: 44px;
+    text-indent: -99999em;
+    transition: background 0.3s ease-in-out 0s;
+    width: 44px;
+    border: 2px solid #2c3e50;
+}
+
+#search button:hover {
+    background-color:#000;
+}
+#home h1 {
+    color: #2c3e50;
+    border:5px solid #2c3e50;
+    margin-top:80px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding:20px;
+    max-width:500px;
+    font-size:30px;
+    font-weight:900;
+}
+
+/*================================
+    ALBUM ANH STYLES
+==================================*/
+#album{
+    margin-left: auto;
+    margin-right: auto;
+}
+#album h1 {
+    color: #fff;
+    border:5px solid #bdc3c7;
+    margin-top:80px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding:20px;
+    max-width:300px;
+    font-size:30px;
+    font-weight:900;
+}
+
+#album h2 {
+    color: #f1c40f;
+    margin-top: 150px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size:50px;
+    font-weight:bold;
+}
+
+/*================================
+    DANG KY THAM GIA CLB STYLES
+==================================*/
+#dangki{
+    background: #34495e;
+}
+#dangki h2 {
+    padding-top:30px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+    color:rgba(255,255,255,.7);
+    padding-bottom:25px;
+}
+#dangki p {
+    color: red;
+}
+#dangki .btn-dangki{
+    margin: 5px;
+    float: right;
+    background-color:#f62459;
+    border: 2px solid #f62459;
+}
+
+
+/*================================
+    FOOTER STYLES
+==================================*/
+#footer {
+    background: #2c3e50;
+    color:#fff;
+}
+#footer h2 {
+    padding-top:30px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+    color:rgba(255,255,255,.7);
+    padding-bottom:25px;
+    }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Post Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div id="status"></div>
+        <div id="formStatus"></div>
+        <div id="getStatus"></div>
+        <div id="postStatus"></div>
+        <br/>
+        <form action="#" method="POST" name="scanPage" id="scanPage">
+            <input type="text" name="pageID" id="pageID" placeholder="Link page cần lấy dữ liệu..."/>
+            <input type="submit" value="Scan Now"/>
+        </form>
+        <br/>
+        Số phút 1 lần quét:
+        <input type="text" value="30" id="timeScan" style="width: 50px;text-align:center;"/>
+        
+    </body>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://connect.facebook.net/vi_VN/all.js"></script>
+    <script type="text/javascript" src="FBinit.js"></script>
+    <script type="text/javascript" src="myPageJS.js"></script>
+    
+</html>

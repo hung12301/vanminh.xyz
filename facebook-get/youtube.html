@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Post videos on Page from Youtube</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div style="margin-top: 20px;background-color: silver; height: 500px; padding: 50px"/>
+        <center><button class="btn btn-lg btn-danger" id="btnLogin" onclick="facebookLogin()">Đăng nhập rồi làm gì thì làm</button></center>
+        <center><button style="display: none" class="btn btn-lg btn-danger" id="btnLogout" onclick="facebookLogout()">Thoát</button></center>
+        <input id="pageAccessToken" type="text" style="display:none;" value=""/>
+        <div style="font-family: sans-serif;color: #2c3e50;font-size: 18px" id="status"></div>
+            <br/>
+            <form id="mainForm" style="display: none" action="#">
+                <input type="text" placeholder="Paste link Youtube..." id="link" class="form-control"/>
+                <br/>
+                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <div class="modal fade" id="mdSelectPage" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Chọn Page nào :D</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ol id="listPage">
+
+                        </ol>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://connect.facebook.net/vi_VN/all.js"></script>
+<script type="text/javascript" src="FBinit.js"></script>
+<script>
+
+    FB.getLoginStatus(function(res){
+        if(res.authResponse){
+            $("#btnLogout").css('display', 'block');
+            $("#btnLogin").css('display', 'none');
+            $("#mdSelectPage").modal('show');
+            $("#mainForm").show('fast');
+            showPage(res.authResponse.access_token);
+        }
+    })
+
+    $("#mainForm").submit(function (e) {
+        e.preventDefault();
+
+        $("#submit").html('<img src="http://www.uchile.cl/uchile/framework/skins/lightbox/images/loader-small.gif"/> Loading...');
+        $("#submit").attr("disabled", "disabled");
+
+        var yotubeLink = $("#link").val();
+
+        if(yotubeLink.length > 0){
+            $.ajax({
+                url: 'getVideoHd.php?youtube=' + yotubeLink
+            }).done(function (res) {
+                var res = JSON.parse(res);
+
+                console.log(res);
+
+                if(!res.error){
+                    var pageid = getCookie('pageid');
+                    var pagetoken = getCookie('pagetoken');
+
+                    postNow(res.videoLink,res.title,pagetoken);
+                }else {
+                    $("#status").html("Hình như bạn nhập link hơi lỗi -_-");
+                    $("#submit").removeAttr("disabled", "disabled");
+                    $("#submit").html('Submit');
+                }
+            })
+        }
+    })
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)===' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length,c.length);
+            }
+        }
+        return "";
+    }
+
+    function showPage (token) {
+        var ol = $("#listPage");
+        var btn = '';
+        FB.api('/me/accounts', 'GET', {
+            access_token : token
+        },function (res) {
+            if(!res.error) {
+                for(var i = 0; i < res.data.length; i++) {
+                    btn += '<button name="allPage" class="btn btn-primary btn-xs" data-token="'+ res.data[i].access_token +'" data-id="'+res.data[i].id+'">';
+                    btn += res.data[i].name;
+                    btn += '</button><br/><br/>';
+                }
+                ol.html(btn);
+
+                $("[name='allPage']").click(function(e) {
+
+                    document.cookie = 'pageid=' + $(this).data('id');
+                    document.cookie = 'pagetoken=' + $(this).data('token');
+
+                    $("#status").html(this.innerHTML);
+                    $("#mdSelectPage").modal('hide');
+                });
+            }
+        });
+    }
+
+    function facebookLogin() {
+        FB.login(function(response) {
+            if (!response.authResponse) {
+                document.getElementById("status").html = 'Đăng nhập không thành công';
+            }
+
+            location.reload();
+
+        }, {scope: 'manage_pages,publish_pages,publish_actions,pages_show_list,pages_manage_cta,pages_manage_instant_articles,pages_messaging,pages_messaging_phone_number'});
+    }
+
+    function facebookLogout() {
+        FB.logout(function(){
+            location.reload();
+        });
+    }
+
+    function postNow (link, title, access_token) {
+        FB.api('/me/videos', 'POST', {
+            access_token : access_token,
+            file_url : link,
+            description: title
+        },function (res) {
+
+            console.log(res);
+
+            if(!res.error){
+                $("#status").html("Tải lên thành công: " + title);
+            }
+            $("#submit").removeAttr("disabled", "disabled");
+            $("#submit").html('Submit');
+        })
+    }
+
+</script>
+</html>

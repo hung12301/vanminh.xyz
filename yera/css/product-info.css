@@ -1,0 +1,126 @@
+.all-info {
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+.thumbnail {
+    width: 370px;
+    height: 370px;
+    overflow: hidden;
+    border: 40px solid #e7e7e7;
+    display: inline-block;
+}
+
+.thumbnail > img {
+    width: 100%;
+}
+
+.info-text {
+    display: inline-block;
+    color: #fff;
+    vertical-align: top;
+    margin-left: 40px;
+}
+
+.info-name {
+    font-family: "Avo-Bold";
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.info-category {
+    margin-bottom: 30px;
+}
+
+.info-vote li {
+    float: left;
+    margin-right: 10px;
+}
+
+.info-vote li img {
+    width: 30px;
+    height: 30px;
+}
+
+.info-vote {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.info-price {
+    display: block;
+    font-family: "Avo-Bold";
+    color: #7be76b;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.info-price > b {
+    font-size: 24px;
+}
+
+.info-more {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.info-button a button {
+    display: inline-block;
+    background: none;
+    border: none;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.info-button .btn-cart {
+    color: #fff;
+    font-size: 72px;
+}
+
+.info-button button:focus {
+    outline: 0;
+}
+
+.info-button .btn-add-to-wishlist {
+    height: 100%;
+    padding: 20px;
+    background: #ff2c2c;
+    vertical-align: 15px;
+    color: #fff;
+    font-family: "Avo-Bold";
+}
+
+.slider-back, .slider-next {
+    margin-top: 160px;
+}
+
+@media all and (max-width: 769px) {
+    .thumbnail {
+        width: 100%;
+        height: auto;
+        border-width: 10px;
+    }
+
+    .all-info {
+        margin-top: 0px;
+    }
+
+    .info-text {
+        text-align: center;
+        display: block;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .info-button a button{
+        margin-right: 20px;
+    }
+
+    .info-button .btn-cart {
+        color: #fff;
+        font-size: 60px;
+    }
+
+    .info-button .btn-add-to-wishlist {
+        padding: 10px;
+    }
+}

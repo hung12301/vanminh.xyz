@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=vietnamese");
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+.background,body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-image: url(http://res.cloudinary.com/tempest/image/upload/c_limit,cs_srgb,dpr_1.0,q_80,w_10000/MTM2NDU2MTg4MTgyMTQ0NjA3.jpg);
+}
+
+.content {
+    background: url(http://career.oude.edu.vn/wp-content/uploads/2015/12/Purple-Background.jpg);
+    background-size: cover;
+    padding: 20px;
+    width: 300px;
+    /*background: #2c3e50;*/
+    margin: 150px auto;
+    color: #fff;
+    border-radius: 5px;
+    border-bottom: 5px solid #95a5a6;
+    font-family: "Roboto Condensed";
+    text-align: center;
+    box-shadow: 0px 3px 10px #2C3E50;
+}
+
+#city-info {
+    margin : 30px auto;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#nhietdo {
+    background-size: 100px 100px;
+    position: relative;
+    margin: auto;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#nhietdo span {
+    color: #2c3e50;
+}
+
+#nhietdo #number {
+    position: relative;
+    font-size: 78px;
+    font-weight: 700;
+    letter-spacing: -4px;
+    line-height: 100px;
+    margin-left: -10px;
+}
+
+#number-info {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 75px;
+    color: #2C3E50;
+}
+
+#nhietdo #o {
+    display: block;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+#nhietdo #char{
+    position: absolute;
+    top: 0px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 3px;
+}
+
+#nhietdo .overlay {
+    transition: all 0.3s ease;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    opacity: 0;
+}
+
+#nhietdo .overlay #change-nhietdo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100px;
+}
+
+#nhietdo:hover > .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.description {
+    font-size: 14px;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    margin-right: -15px;
+    font-style: italic;
+    color: #ecf0f1;
+}
+
+.bodyOverlay {
+    width: 100%;
+    height: 100%;
+    background: url("http://res.cloudinary.com/tempest/image/upload/c_limit,cs_srgb,dpr_1.0,q_80,w_10000/MTM2NDU2MTg4MTgyMTQ0NjA3.jpg");
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        width: 70vw;
+    }
+}

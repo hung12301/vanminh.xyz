@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contents {
+    margin-top: 60px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.contents h1 {
+    margin: 0;
+    margin-top: 68px;
+    font-size: 63px;
+}
+
+.header-photo {
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0px 60px 0px 60px;
+}
+.header-photo-description {
+    margin: 0;
+    margin: 7px 0px 5px 0px;
+}
+
+.story {
+    padding: 0px 250px 0px 250px;
+    margin: 40px 0px 40px 0px;
+}
+
+.notice {
+    padding-left: 25px;
+}
+
+.notice p{
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.notice cite {
+    color: #777;
+}
+
+.notice cite:before {
+    content: '\2014 \00A0';
+}

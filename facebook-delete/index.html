@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Delete Options</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+</head>
+<body>
+  <form action="#" style="width:1200px; margin: 100px auto 0">
+    <h3>DELETE ALL NGÔI SAO THỜI TRANG FROM YOUR WALL</h3>
+    <input type="text" class="form-control" placeholder="Access Token" id="access_token">
+    <br>
+    <input type="submit" class="btn btn-primary" value="Submit !">
+  </form>
+</body>
+    
+    <script>
+        
+        var apiUrl = "https://graph.facebook.com/v2.8";
+        var accessToken = null;
+        
+        function getFeed (accessToken,callback) {
+            $.ajax({
+                url : apiUrl + '/me/feed?fields=link&limit=50&access_token=' + accessToken
+            }).done(function (response) {
+               callback(accessToken,response.data);
+            });
+        }
+        
+        function eachData (accessToken,data) {
+            data.map(function (value) {
+                if(value.link.indexOf("ngoisao.360play.vn")){
+                    deleteData(accessToken,value.id);
+                }
+            });
+        }
+        
+        function deleteData (accessToken,id) {
+            $.ajax({
+                url : apiUrl + '/' + id,
+                method : "DELETE"
+            })
+        }
+        
+        $("form").submit(function (e) {
+            e.preventDefault();
+            accessToken = $("#access_token").val();
+            
+            getFeed(accessToken,eachData);            
+        });
+        
+    </script>
+    
+</html>

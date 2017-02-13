@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="VMDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/nomalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+<!---->
+    <title>Cart</title>
+
+</head>
+<body>
+<div class="loading">
+    <img src="http://vanminh.xyz/wiki/loading.svg"/>
+</div>
+<!-- Header -->
+<header>
+    <div class="container">
+        <a href="index.html"><img class="logo" src="images/logo.png"></a>
+        <ul class="header-icon">
+            <li><a href="cart.html"><img src="images/cart.png"/></a> </li>
+            <li>
+                <div class="icon-search">
+                    <form action="#" class="search-form">
+                        <input type="text" class="text-search" placeholder="Search Anything..."/>
+                        <input type="submit" style="display: none"/>
+                    </form>
+                </div>
+            </li>
+            <li class="btn-menu"><i class="fa fa-bars"></i></li>
+            <li class="login-logout">
+                <a href="login.html"><b>Login</b></a> / <a href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-text">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li class="active"><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav-icon">
+                <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
+<section id="cart">
+
+    <span class="sale-sell"><b>PAY and CART</b></span>
+    <p class="sale-detail">You need <b>"PAY"</b> for product on sales</p>
+
+    <table class="cart">
+        <thead>
+            <th>ITEMS</th>
+            <th>Price</th>
+            <th>Quantity <i class="fa fa-chevron-down"></i></th>
+            <th>Total</th>
+            <th>Remove</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="td-item"><img class="thumbnail" src="images/product-thumbnail-9.jpg"/><p class="item-name">Picolo Spoce Jar - PH01-M4 (21) - (1 piece) 465 ml x 1 "Piccolo" means small in Italian and these jars are ideal...</p></td>
+                <td>100$</td>
+                <td>1</td>
+                <td>100$</td>
+                <td class="remove"><i class="fa fa-check-circle"></i></td>
+            </tr>
+
+            <tr>
+                <td class="td-item"><img class="thumbnail" src="images/product-thumbnail-7.jpg"/><p class="item-name">Picolo Spoce Jar - PH01-M4 (21) - (1 piece) 465 ml x 1 "Piccolo" means small in Italian and these jars are ideal...</p></td>
+                <td>100$</td>
+                <td>1</td>
+                <td>100$</td>
+                <td class="remove"><i class="fa fa-check-circle"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-action">
+        <a href="product.html"><button class="btn-back">Back To Shop</button></a>
+        <button class="btn-update">Update Cart</button>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-left">
+        <img src="images/logo-footer.png"/>
+        <span>Company</span>
+    </div>
+
+    <div class="footer-right">
+        <p>
+            1948 - The first automatic manufacturing plant for glass bottles and pharmaceutical vial.<br>
+            1955 - The first glassware decorating plant for branding of consumer products.<br>
+            1957 - The first automatic pressed glassware plant for drink ware.<br>
+            1958 - The launch of Indias largest glassware brand <b>YERA</b><br>
+            1962 - Introduction of heat-resistant opal glassware for kitchenware and tableware.<br>
+            1963 - Introduction of high voltage glass insulators and architectural glass blocks.<br>
+            1970 - Introduction of lead crystal glassware products.<br>
+            2007 - Introduction of blown drink ware products.<br>
+            2008 - Launch of Platina brand.<br>
+            2012 - Launch of <b>YERA</b> INTERNATIONAL brand.<br>
+        </p>
+    </div>
+    <p class="footer-copyright">Copyright © 2016 <img src="images/logo-footer.png"/>. Think Glass. Think Class </p>
+</footer>
+<i class="scroll-top fa fa-angle-double-up"></i>
+<i class="scroll-bottom fa fa-angle-double-down"></i>
+<!-- End Footer -->
+</body>
+</html>

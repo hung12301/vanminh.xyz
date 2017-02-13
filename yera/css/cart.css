@@ -1,0 +1,102 @@
+#cart {
+    text-align: center;
+    color: #fff;
+    padding: 25px 30px;
+}
+
+.sale-sell {
+    font-size: 92px;
+    letter-spacing: 14px;
+}
+
+.cart {
+    margin-top: 50px;
+    width: 100%;
+    border-spacing: 0;
+}
+
+td,th {
+    border: 2px solid #fff;
+}
+
+th {
+    padding: 20px;
+}
+
+th:nth-child(1) {
+    font-family: "Avo-Bold";
+    font-size: 32px;
+}
+
+td {
+    border-top: 0;
+}
+
+.item-name {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.td-item {
+    width: 700px;
+    padding: 25px;
+}
+
+.thumbnail {
+    width: 175px;
+    height: 165px;
+    float: left;
+    margin-right: 30px;
+    border: 10px solid #e7e7e7;
+}
+
+.remove:hover {
+    cursor: pointer;
+}
+
+.remove .fa {
+    font-size : 62px;
+    -webkit-transition: all 0.1s cubic-bezier(0,.38,.72,2);
+    -moz-transition: all 0.1s cubic-bezier(0,.38,.72,2);
+    transition: all 0.1s cubic-bezier(0,.38,.72,2);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+}
+
+.removed .fa {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+.btn-action {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.btn-action button {
+    background: none;
+    border: 0;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: "Avo-Bold";
+    padding: 20px;
+}
+
+.btn-action button:first-child {
+    margin-left: 0;
+}
+
+.btn-action .btn-back {
+    background: #ff2c2c;
+}
+
+.btn-action .btn-update {
+    background: #89c476;
+}
+
+footer {
+    margin-top: 25px;
+}
